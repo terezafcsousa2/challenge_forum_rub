@@ -4,5 +4,21 @@
 * Topico
 * Resposta
 * Curso
-* Usuário
+* Usuario
 * Perfil
+  
+## Atributos de um tópico:
+
+* id
+
+* titulo
+
+* mensagem
+
+* data de criação
+
+* estado do tópico
+
+* autor
+
+* curso
