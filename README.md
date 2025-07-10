@@ -1,4 +1,4 @@
-# challenge_forum_rub
+# challenge_forum_rub[Em construção...]
 ## Criação de um fórum de curso inspirado no forum Alura
 
 ## 🎓 Fórum de Discussão do Curso – [Nome do Curso]
