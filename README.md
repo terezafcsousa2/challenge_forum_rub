@@ -45,4 +45,9 @@
 
 * curso
   
-
+# DEPENDÊNCIAS
+* linguagem Java.
+* Instalar o JDK 17 ou 21 ou em versão estável
+* Configurar o projeto utilizando https://start.spring.io/
+* Usar o banco de dados MySQL: versão 8 em diante: https://dev.mysql.com/downloads/installer/
+* IDE (Ambiente de desenvolvimento integrado) IntelliJ IDEA- opcional - https://www.jetbrains.com/pt-br/idea/download/?section=windows
