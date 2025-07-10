@@ -3,8 +3,9 @@
 
 # challenge_forum_rub[Em construção...]
 ## Criação de um fórum de curso inspirado no forum Alura
-<img src= “https://github.com/terezafcsousa2/challenge_forum_rub/blob/main/assets/Copilot_imagem_forum.png” alt=” imagem representativa do fórum”/>
+
 </div>
+
 ## 🎓 Fórum de Discussão do Curso – [Nome do Curso]
 ## Bem-vindo ao espaço dedicado à troca de ideias, resolução de dúvidas e construção coletiva do conhecimento! 
 ## Este fórum foi criado para estimular o aprendizado colaborativo entre os alunos, baseado em boas práticas de plataformas como a Alura.
