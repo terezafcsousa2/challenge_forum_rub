@@ -7,6 +7,7 @@
 ## Criação de um fórum de curso inspirado no forum Alura
 
 </div>
+<img src="https://github.com/terezafcsousa2/challenge_forum_rub/blob/main/forum_rub.png" alt= "Badge">
 
 ## 🎓 Fórum de Discussão do Curso 
 ## Bem-vindo ao espaço dedicado à troca de ideias, resolução de dúvidas e construção coletiva do conhecimento! 
