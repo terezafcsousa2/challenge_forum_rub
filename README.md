@@ -1,4 +1,6 @@
-
+@oraclenexteducation 
+@SouEstudanteEmFormacaoONEG8 
+@Alura
 <div align="center">
 
 ## Criação de um fórum de curso inspirado no forum Alura
