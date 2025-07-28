@@ -8,7 +8,8 @@
 </p>
 <img  
 src="https://github.com/terezafcsousa2/challenge_forum_rub/blob/main/assets/forum_rub.png" alt= "Badge">
-  
+</div>  
+
 ## 🎓 Fórum de Discussão do Curso 
 ## Bem-vindo ao espaço dedicado à troca de ideias, resolução de dúvidas e construção coletiva do conhecimento! 
 ## Este fórum foi criado para estimular o aprendizado colaborativo entre os alunos, baseado em boas práticas de plataformas como a Alura.
@@ -30,7 +31,7 @@ src="https://github.com/terezafcsousa2/challenge_forum_rub/blob/main/assets/foru
   
 # DEPENDÊNCIAS
 * linguagem Java.
-* Instalar o JDK 17 ou 21 ou em versão estável
+* Instalar o JDK 21 ou em versão estável
 * Configurar o projeto utilizando https://start.spring.io/
 * Usar o banco de dados MySQL: versão 8 em diante: https://dev.mysql.com/downloads/installer/
 * IDE (Ambiente de desenvolvimento integrado) IntelliJ IDEA- opcional - https://www.jetbrains.com/pt-br/idea/download/?section=windows
