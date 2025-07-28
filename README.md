@@ -8,7 +8,7 @@
 
 </div>
 
-## 🎓 Fórum de Discussão do Curso – [Nome do Curso]
+## 🎓 Fórum de Discussão do Curso 
 ## Bem-vindo ao espaço dedicado à troca de ideias, resolução de dúvidas e construção coletiva do conhecimento! 
 ## Este fórum foi criado para estimular o aprendizado colaborativo entre os alunos, baseado em boas práticas de plataformas como a Alura.
 
