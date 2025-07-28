@@ -2,12 +2,12 @@
 @SouEstudanteEmFormacaoONEG8 
 @Alura
 @rcaneppele
-<div align="center">
+<h1 align= "center">Esse programa faz parte do desafio: Praticando Spring Framework: Challenge Fórum Hub G8 - ONE/Challenge.</h2>
 
-## Criação de um fórum de curso inspirado no forum Alura
 
-</div>
-<img align = center src="https://github.com/terezafcsousa2/challenge_forum_rub/blob/main/assets/forum_rub.png" alt= "Badge">
+</p>
+<img  
+src="https://github.com/terezafcsousa2/challenge_forum_rub/blob/main/assets/forum_rub.png" alt= "Badge">
 
 ## 🎓 Fórum de Discussão do Curso 
 ## Bem-vindo ao espaço dedicado à troca de ideias, resolução de dúvidas e construção coletiva do conhecimento! 
