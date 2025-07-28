@@ -29,7 +29,6 @@ public class UsuarioController {
         var usuario = new Usuario(dados, passwordEncoder);
         usuarioRepository.save(usuario);
 
-        // Gera URI do novo recurso: /usuarios/{id}
         var uri = ServletUriComponentsBuilder
                 .fromCurrentRequest()
                 .path("/{id}")

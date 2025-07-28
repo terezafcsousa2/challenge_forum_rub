@@ -25,10 +25,10 @@ public class Usuario implements UserDetails {
     private String login;
     private String senha;
 
-    // 👤 Campo adicional para nome completo do usuário
+    // Campo adicional para nome completo do usuário
     private String nome;
 
-    // 🛠️ Construtor usado no cadastro de usuário
+    //  Construtor usado no cadastro de usuário
     public Usuario(DadosCadastroUsuario dados, PasswordEncoder encoder) {
         this.login = dados.login();
         this.nome = dados.nome();

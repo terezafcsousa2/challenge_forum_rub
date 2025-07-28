@@ -6,8 +6,10 @@ import challenge_forum_rub.api.topico.Topico;
 import challenge_forum_rub.api.topico.TopicoRequest;
 import challenge_forum_rub.api.topico.TopicoResponse;
 import challenge_forum_rub.api.usuario.Usuario;
+import challenge_forum_rub.api.usuario.UsuarioRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -17,13 +19,18 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/topicos")
 public class TopicoController {
 
+
     @Autowired
     private TopicoRepository topicoRepository;
+
+    @Autowired
+    private UsuarioRepository usuarioRepository;
 
     @PostMapping
     @Transactional
@@ -40,35 +47,63 @@ public class TopicoController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deletar(@PathVariable Long id) {
-        if (!topicoRepository.existsById(id)) {
+        Optional<Topico> optionalTopico = topicoRepository.findById(id);
+        if (optionalTopico.isEmpty()) {
             return ResponseEntity.notFound().build();
         }
 
-        topicoRepository.deleteById(id);
-        return ResponseEntity.noContent().build();
+        Topico topico = optionalTopico.get();
+
+        String usuarioLogado = SecurityContextHolder.getContext().getAuthentication().getName();
+
+        Usuario usuario = usuarioRepository.findByLogin(usuarioLogado);
+        if (!topico.getAutor().equals(usuario.getNome())) {
+            return ResponseEntity.status(HttpStatus.FORBIDDEN)
+                    .body("Você só pode deletar tópicos que você criou.");
+        }
+
+        topico.setAtivo(false); // Soft delete
+        topicoRepository.save(topico);
+
+        return ResponseEntity.ok("Tópico inativado com sucesso.");
     }
+
+
     @GetMapping
     public List<TopicoResponse> listar() {
-        return topicoRepository.findAll().stream()
+        return topicoRepository.findByAtivoTrue().stream()
                 .map(TopicoResponse::new)
                 .toList();
     }
 
+
+
+
     @PutMapping("/{id}")
-    @Transactional
-    public ResponseEntity<TopicoResponse> atualizar(@PathVariable Long id, @RequestBody @Valid DadosAtualizacaoTopico dados) {
-        Topico topico = topicoRepository.getReferenceById(id);
+    public ResponseEntity<Topico> atualizar(@PathVariable Long id,
+                                            @RequestBody DadosAtualizacaoTopico dados,
+                                            @AuthenticationPrincipal Usuario usuarioLogado) {
 
-        // Pega o usuário logado via Spring Security
-        Usuario usuarioLogado = (Usuario) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        Optional<Topico> topicoOptional = topicoRepository.findById(id);
 
-        // Verifica se o autor do tópico é o mesmo do usuário logado
-        if (!topico.getAutor().equals(usuarioLogado)) {
+        if (topicoOptional.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+
+        Topico topico = topicoOptional.get();
+
+        // Verifica se o usuário logado é o autor
+        if (!topico.getAutor().equalsIgnoreCase(usuarioLogado.getNome())) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
         }
 
-        topico.atualizar(dados);
-        return ResponseEntity.ok(new TopicoResponse(topico));
+        // Atualiza os campos
+        topico.setTitulo(dados.titulo());
+        topico.setMensagem(dados.mensagem());
+
+        topicoRepository.save(topico);
+
+        return ResponseEntity.ok(topico);
     }
 
 

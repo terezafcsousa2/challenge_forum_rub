@@ -9,6 +9,14 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
+@EntityScan(basePackages = {
+		"challenge_forum_rub.api.usuario",
+		"challenge_forum_rub.api.topico"
+})
+@EnableJpaRepositories(basePackages = {
+		"challenge_forum_rub.api.usuario",
+		"challenge_forum_rub.api.repository"
+})
 public class ApiApplication {
 
 	public static void main(String[] args) {

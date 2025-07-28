@@ -20,6 +20,9 @@ public class Topico {
 
     private String autor;
     private String curso;
+    @Column(nullable = false)
+    private boolean ativo = true;
+
 
     public Topico(TopicoRequest dados) {
         this.titulo = dados.getTitulo();
@@ -84,6 +87,14 @@ public class Topico {
 
     public String getCurso() {
         return curso;
+    }
+
+    public boolean isAtivo() {
+        return ativo;
+    }
+
+    public void setAtivo(boolean ativo) {
+        this.ativo = ativo;
     }
 
     public void setCurso(String curso) {
