@@ -1,6 +1,7 @@
 @oraclenexteducation 
 @SouEstudanteEmFormacaoONEG8 
 @Alura
+@rcaneppele
 <div align="center">
 
 ## Criação de um fórum de curso inspirado no forum Alura
