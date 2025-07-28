@@ -22,28 +22,8 @@
 
 ## Dúvida Resolvida ✅: Indicação visual clara (ex: selo, check ou mensagem indicativa) que mostra quando um tópico teve sua questão solucionada, reforçando o engajamento e o apoio mútuo.
 
-## Entidades:
-* Topico
-* Resposta
-* Curso
-* Usuario
-* Perfil
-  
-## Atributos de um tópico:
 
-* id
 
-* titulo
-
-* mensagem
-
-* data de criação
-
-* estado do tópico
-
-* autor
-
-* curso
   
 # DEPENDÊNCIAS
 * linguagem Java.
