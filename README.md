@@ -1,7 +1,6 @@
 
 <div align="center">
 
-# challenge_forum_rub[Em construção...]
 ## Criação de um fórum de curso inspirado no forum Alura
 
 </div>
